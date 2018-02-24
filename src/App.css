@@ -1,0 +1,92 @@
+html {
+  font-size: 62.5%;
+  color: #444;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+small {
+  display: block;
+  font-size: 66%;
+}
+
+ul, ol {
+  font-size: 1.8rem;
+  line-height: 2;
+}
+
+address > * {
+  margin: 0;
+}
+
+header {
+  display:flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.employee-directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 1rem;
+}
+
+.employee-card {
+  display: flex;
+}
+
+.employee-card .employee-card--image {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.employee-card .employee-card--image > * {
+  width: 100%;
+}
+.employee-card .employee-card--info {
+  padding: 0 10px;
+}
+.employee-card .employee-card--info > * {
+  margin-top: 0;
+}
+
+.employee-card--pills {
+  padding-left: 0;
+}
+
+input {
+  padding: 1rem;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
