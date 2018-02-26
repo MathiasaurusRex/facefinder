@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './App.css';
 
 import EmployeeDirectory from './components/EmployeeDirectory';
+
 
 import Faces from './data/Faces';
 
@@ -35,19 +37,30 @@ class App extends Component {
         }
     );
     return (
-      <div className="App">
-        <header>
-          <a href="/">
-            FaceFinder!
-          </a>
-          <div>
-            <label htmlFor="search">Search</label>
-            <input id="search" type="text" onChange={this.updateSearch}/>
-          </div>
-        </header>
+      <Router>
+        <div className="App">
+          <header>
+            <a href="/">
+              FaceFinder!
+            </a>
+            <div>
+              <label htmlFor="search">Search</label>
+              <input id="search" type="text" onChange={this.updateSearch}/>
+            </div>
+          </header>
+          <Switch>
+            
+            <Route exact path='/' render={() => (
+                <EmployeeDirectory faces={filteredFace}/>
+            )}/>
 
-        <EmployeeDirectory faces={filteredFace}/>
-      </div>
+            
+
+            {/* TODO
+            EmployeePage */}
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
