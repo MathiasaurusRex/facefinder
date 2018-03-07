@@ -37,7 +37,6 @@ class App extends Component {
         }
     );
     return (
-      // Commit test
       <Router>
         <div className="App">
           <header>
